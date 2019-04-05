@@ -12,3 +12,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+button.btn.btn-block {
+  height: 36px;
+}
+input {
+  padding: 10px;
+  width: 200px;
+}
+.gifyContainer {
+  margin-top: 20px;
+}
+
+iframe{
+  border: 1px solid transparent;
+}

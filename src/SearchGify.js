@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import axios from 'axios';
 
 export const SearchGify = () => {
 
    // const [giphyArray, setgiphyArray] = useState([]);
-    const [inputValue, setinputValue] = useState('');
+    const [inputValue, setinputValue] = useState('marvel');
     const [gifValue, setgifValue] = useState('');
     let giphyArray = [];
     let i = 0;
@@ -12,11 +12,16 @@ export const SearchGify = () => {
     const apiKey = '1xGPgNOHn0R3iRpJtMlxj0hooj5gubLQ';
     const url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}`
     const objParam = {
-        limit: '25',
+        limit: '5',
         offset: '0',
         rating: 'G',
         lang: 'en'
     }
+    
+    useEffect(() => {
+        handleClick()
+    },[])
+    
 
     const serializeGetParams = (input) => {
         console.log("input" + input)
@@ -32,21 +37,14 @@ export const SearchGify = () => {
     }
 
     const changeGif = () => {
-        // for(let i = 0;i<giphyArray.length;i++){
-        //     setTimeout(() => {
-        //         console.log("index" + giphyArray[i].embed_url)
-        //         setgifValue(giphyArray[i].embed_url);
-        //     },2000)
-        // }
         if(i < giphyArray.length) {
             setTimeout(() => {
                 console.log("index" + giphyArray[i].embed_url)
                 setgifValue(giphyArray[i].embed_url);
                 i++;
                 changeGif();
-            }, 1000)
+            }, 5000)
         }
-
     }
 
 
@@ -66,7 +64,7 @@ export const SearchGify = () => {
 
     return (
         <div>
-            <input type="text" placeholder="Search" onChange={handleChange} />
+            <input type="text" placeholder="Search" onChange={handleChange}/>
             <button className="btn btn-block" onClick={handleClick}>Submit</button>
 
             <div className="gifyContainer">
