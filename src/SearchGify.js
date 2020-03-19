@@ -56,7 +56,7 @@ export const SearchGify = () => {
       {giphyData.length > 0 ? (
         <div className="giphy-container">
           <Suspense fallback={<h1>Loading Giphys</h1>}>
-            <GiphyItem data={giphyData} value/>
+            <GiphyItem data={giphyData}/>
           </Suspense>
         </div>
       ) : null}
