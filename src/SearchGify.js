@@ -10,7 +10,7 @@ export const SearchGify = () => {
   const apiKey = "1xGPgNOHn0R3iRpJtMlxj0hooj5gubLQ";
   const url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}`;
   const objParam = {
-    limit: "5",
+    limit: "50",
     offset: "0",
     rating: "G",
     lang: "en"
@@ -56,8 +56,7 @@ export const SearchGify = () => {
       {giphyData.length > 0 ? (
         <div className="giphy-container">
           <Suspense fallback={<h1>Loading Giphys</h1>}>
-              <p>Showing {inputValue} Giphys</p>
-            <GiphyItem data={giphyData} />
+            <GiphyItem data={giphyData} value/>
           </Suspense>
         </div>
       ) : null}
