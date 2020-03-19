@@ -12,8 +12,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-button.btn.btn-block {
+button.btn.btn-primary {
   height: 36px;
+  color: black;
+  background-color: aqua;
+  border-top-right-radius: 32px;
+  border-bottom-right-radius: 32px;
 }
 input {
   padding: 10px;
@@ -39,12 +43,12 @@ iframe{
     font-size: 30px;
     padding: 10px 0px 10px 20px;
 }
-.search-bar button.btn.btn-block {
+.search-bar button.btn.btn-primary {
   height: 57px;
   position: absolute;
   right: -27px;
   top: 0;
-  font-size: 27px;
+  font-size: 25px;
 }
 .giphy-container{
   margin-top: 30px;

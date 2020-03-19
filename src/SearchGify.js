@@ -46,10 +46,10 @@ export const SearchGify = () => {
       <div className="search-bar">
         <input
           type="text"
-          placeholder="Search"
+          placeholder="Search Gifs.."
           onChange={event => handleChange(event)}
         />
-        <button className="btn btn-block" onClick={handleClick}>
+        <button className="btn btn-primary" onClick={handleClick}>
           Submit
         </button>
       </div>
