@@ -25,4 +25,27 @@ input {
 
 iframe{
   border: 1px solid transparent;
+    float: left;
+    width: 24%;
+}
+.search-bar {
+  margin-top: 30px;
+  position: relative;
+}
+.search-bar input {
+  width: 100%;
+    border-radius: 32px;
+    border: 1px solid #7a7a7a;
+    font-size: 30px;
+    padding: 10px 0px 10px 20px;
+}
+.search-bar button.btn.btn-block {
+  height: 57px;
+  position: absolute;
+  right: -27px;
+  top: 0;
+  font-size: 27px;
+}
+.giphy-container{
+  margin-top: 30px;
 }
